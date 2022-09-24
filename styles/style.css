@@ -1,0 +1,239 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+i {
+  pointer-events: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(rgb(86, 0, 167), rgb(0, 0, 0));
+  min-width: 100vw;
+  min-height: 100vh;
+  align-items: center;
+}
+body header {
+  min-height: 25vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0 0 7px #fff;
+}
+body header h1 {
+  color: white;
+  font-size: 4rem;
+}
+body section {
+  font-family: "Oswald", sans-serif;
+}
+body section form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 1rem 0 1rem;
+  margin-bottom: 3rem;
+  /* Chrome, Safari, Edge, Opera */
+  /* Firefox */
+}
+body section form input,
+body section form button {
+  border: none;
+  padding: 0.25rem 0.5rem;
+  font-size: 1.75rem;
+  margin: 0.1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+body section form input:focus {
+  box-shadow: 0 0 10px 4px #34495e;
+}
+body section form button {
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  font-size: 2rem;
+  background: linear-gradient(rgb(255, 153, 0), rgb(255, 217, 0));
+  color: white;
+  text-shadow: 0 0 7px #fff;
+}
+body section form button:hover {
+  background: linear-gradient(rgba(255, 153, 0, 0.9), rgba(255, 217, 0, 0.9));
+}
+body section form input[type=text] {
+  min-width: 30rem;
+  text-align: center;
+}
+body section form input[type=number] {
+  width: 3rem;
+  text-align: center;
+}
+body section form input::-webkit-outer-spin-button,
+body section form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+body section form input[type=number] {
+  -moz-appearance: textfield;
+}
+body section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body section div.todo {
+  min-width: 30vw;
+  max-width: 30vw;
+  min-height: 7vh;
+  background-color: rgba(176, 92, 255, 0.7);
+  display: flex;
+  align-items: center;
+  margin: 0.2rem 0rem;
+  transition: all 0.1s ease;
+  border: none;
+  border-radius: 0.25rem;
+  position: relative;
+  transition: all 0.1s ease;
+}
+body section div.todo div.complete {
+  border: none;
+  background-color: white;
+  border-radius: 50%;
+  min-width: 1.1rem;
+  min-height: 1.1rem;
+  margin-left: 1rem;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+body section div.todo p {
+  color: black;
+  padding: 0.25rem 0.5rem;
+  font-size: 1.5rem;
+}
+body section div.todo p.todo-text {
+  min-width: 60%;
+  color: white;
+  word-break: break-all;
+}
+body section div.todo p.todo-time {
+  min-width: 40%;
+  text-align: center;
+  color: white;
+}
+body section div.todo button {
+  padding: 0.1rem 0.3rem;
+  font-size: 1.75rem;
+  cursor: pointer;
+}
+body section div.todo button.trash {
+  background-color: transparent;
+  position: absolute;
+  right: -3rem;
+  border: none;
+  color: red;
+}
+body section div.todo button.trash:hover {
+  font-size: 2rem;
+  right: -3.1rem;
+}
+body .done {
+  background-color: rgb(102, 29, 170) !important;
+}
+body .done_button {
+  background: linear-gradient(rgb(255, 153, 0), rgb(255, 217, 0)) !important;
+}
+body .doneTextColor {
+  background: linear-gradient(rgb(255, 153, 0), rgb(255, 217, 0)) !important;
+  -webkit-background-clip: text !important;
+          background-clip: text !important;
+  color: transparent !important;
+}
+body .doneTimeColor {
+  background: linear-gradient(rgb(255, 153, 0), rgb(255, 217, 0)) !important;
+  -webkit-background-clip: text !important;
+          background-clip: text !important;
+  color: transparent !important;
+}
+@-webkit-keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*media*/
+@media screen and (max-width: 900px) {
+  body section.list_page form {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  body section.list_page form input.month {
+    position: absolute;
+    bottom: -4rem;
+    left: 40%;
+  }
+  body section.list_page form input.day {
+    position: absolute;
+    bottom: -4rem;
+    right: 40%;
+  }
+  body section.list_page form button[type=submit] {
+    position: absolute;
+    bottom: -8rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  body section.list_page form {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  body section.list_page form input[type=text] {
+    max-width: 2rem;
+  }
+  body section.list_page form input.month {
+    position: absolute;
+    bottom: -4rem;
+    left: 40%;
+  }
+  body section.list_page form input.day {
+    position: absolute;
+    bottom: -4rem;
+    right: 40%;
+  }
+  body section.list_page form button[type=submit] {
+    position: absolute;
+    bottom: -8rem;
+  }
+}/*# sourceMappingURL=style.css.map */

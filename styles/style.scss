@@ -1,0 +1,252 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+i {
+  pointer-events: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(rgb(86, 0, 167),rgb(0, 0, 0));
+  min-width: 100vw;
+  min-height: 100vh;
+  align-items: center;
+
+  header {
+    min-height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 0 7px #fff;
+    h1 {
+      color: white;
+      font-size: 4rem;
+    }
+  }
+  
+  section{
+    font-family: 'Oswald', sans-serif;
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem 1rem 0 1rem;
+      margin-bottom: 3rem;
+    
+      input,
+      button {
+        border: none;
+        padding: 0.25rem 0.5rem;
+        font-size: 1.75rem;
+        margin: 0.1rem;
+        border-radius: .25rem;
+        cursor: pointer;
+      }
+      input{
+        &:focus{
+          box-shadow: 0 0 10px 4px #34495e;
+        }
+      }
+      button{
+        border-radius: 50%;
+        width: 3rem;
+        height: 3rem;
+        font-size: 2rem;
+        background: linear-gradient(rgb(255, 153, 0),rgb(255, 217, 0));
+        color:white;
+        text-shadow: 0 0 7px #fff;
+
+        &:hover{
+          background: linear-gradient(rgba(255, 153, 0, .9),rgb(255, 217, 0, .9));
+        }
+      }
+    
+      input[type="text"] {
+        min-width: 30rem;
+        text-align: center;
+      }
+    
+      input[type="number"] {
+        width: 3rem;
+        text-align: center;
+      }
+    // Hide arrow
+      /* Chrome, Safari, Edge, Opera */
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    
+      /* Firefox */
+      input[type="number"] {
+        -moz-appearance: textfield;
+      }
+    
+    }
+  }
+  
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    div.todo {
+      min-width: 30vw;
+      max-width: 30vw;
+      min-height: 7vh;
+      background-color: rgba(176, 92, 255, 0.7);
+      display: flex;
+      align-items: center;
+      margin: 0.2rem 0rem;
+      transition: all 0.1s ease;
+      border: none;
+      border-radius: 0.25rem;
+      position: relative;
+      transition: all .1s ease;
+
+  
+      div.complete{
+        border: none;
+        background-color: white;
+        border-radius: 50%;
+        min-width: 1.1rem;
+        min-height: 1.1rem;
+        margin-left: 1rem;
+        margin-right: .5rem;
+        cursor: pointer;
+      }
+  
+      p { 
+        color: black;
+        padding: 0.25rem 0.5rem;
+        font-size: 1.5rem;
+      }
+  
+      p.todo-text {
+        min-width: 60%;
+        color: white;
+        word-break:break-all
+      }
+      p.todo-time {
+        min-width: 40%;
+        text-align: center;
+        color: white;
+      }
+  
+      button {
+        padding: .1rem .3rem;
+        font-size: 1.75rem;
+        cursor: pointer;
+      }
+  
+      button.trash {
+        background-color: transparent;
+        position: absolute;
+        right: -3rem;
+        border: none;
+        color: red;
+
+        &:hover{
+          font-size: 2rem;
+          right: -3.1rem;
+        }
+      }
+    }
+  }
+  
+  .done {
+    background-color: rgb(102, 29, 170)!important ;
+  }
+
+  .done_button {
+    background: linear-gradient(rgb(255, 153, 0),rgb(255, 217, 0))!important;
+  }
+
+  .doneTextColor{
+    background: linear-gradient(rgb(255, 153, 0),rgb(255, 217, 0))!important;
+    background-clip: text !important;
+    color: transparent !important;
+  }
+
+  .doneTimeColor{
+    background: linear-gradient(rgb(255, 153, 0),rgb(255, 217, 0))!important;
+    background-clip: text !important;
+    color: transparent !important;
+  }
+
+  @keyframes fadeout {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+  }
+  
+  @keyframes fadein {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+}
+
+/*media*/
+@media screen and (max-width: 900px){
+  body{
+    section.list_page{
+      form{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        input.month {
+          position: absolute;
+          bottom: -4rem;
+          left: 40%;
+        }
+        input.day {
+          position: absolute;
+          bottom: -4rem;
+          right: 40%;
+        }
+        button[type="submit"]{
+          position: absolute;
+          bottom: -8rem;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 900px){
+  body{
+    section.list_page{
+      form{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        input[type="text"]{
+          max-width: 2rem;
+        }
+
+        input.month {
+          position: absolute;
+          bottom: -4rem;
+          left: 40%;
+        }
+        input.day {
+          position: absolute;
+          bottom: -4rem;
+          right: 40%;
+        }
+        button[type="submit"]{
+          position: absolute;
+          bottom: -8rem;
+        }
+      }
+    }
+  }
+}
+
+
