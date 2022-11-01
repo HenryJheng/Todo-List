@@ -137,8 +137,8 @@ body section div.todo button.trash {
   color: red;
 }
 body section div.todo button.trash:hover {
-  font-size: 2rem;
-  right: -3.1rem;
+  transition: all 0.2s;
+  transform: scale(1.3);
 }
 body .done {
   background-color: rgb(102, 29, 170) !important;

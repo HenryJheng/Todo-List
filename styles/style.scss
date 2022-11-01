@@ -153,8 +153,8 @@ body {
         color: red;
 
         &:hover{
-          font-size: 2rem;
-          right: -3.1rem;
+          transition: all .2s;
+          transform: scale(1.3);
         }
       }
     }
