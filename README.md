@@ -1,8 +1,3 @@
----
-title: Todo-List
-description: Easy to record your task .
----
-
 # Todo-List
 
 Visit: https://azkabanwarden.github.io/Todo-List/
